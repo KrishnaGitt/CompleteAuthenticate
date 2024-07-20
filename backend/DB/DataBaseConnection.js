@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const DataBaseConnection=()=>{
-    const url="mongodb://localhost:27017"
+    const url="mongodb://localhost:27017/CompleteAuth"
         mongoose.connect(url).then(()=>{
             console.log("data base is  connected")
         }).catch((eror)=>{

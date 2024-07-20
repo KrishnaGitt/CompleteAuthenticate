@@ -1,15 +1,21 @@
-import User from "../../../Authentication/backend/model/UserModel.js";
+import User from "../UserModel/User.js";
 
-export const registorUser=(req,res)=>{
-    console.log("hello Krishna")
-    const user=req.body;
+export const registorUser=async(req,res)=>{
+    console.log("hello Krishna",req.body)
+    const {firstName,lastName,age,email,phone,password,confirmpassword}=req.body;
     try {
-     
-        // const createdUser=await User.create({
-        //     user
-        // })
-    } catch (error) {
-        
-    }
 
+        const createdUser=await User.create({
+            firstName, lastName, age, email, phone, password, confirmpassword
+        })
+        console.log("createdUser-->",createdUser)
+        res.status(201).json({
+            createdUser
+        })
+    } catch (error) {
+        console.log("error",error)
+        res.status(500).json({
+            message:"error->",Error:error.message
+        })
+    }
 }
