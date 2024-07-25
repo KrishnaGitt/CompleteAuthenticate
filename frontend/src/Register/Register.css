@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+ .main-div{
+    background-image: url('../dist/bg.jpg');
+    height: 100vj;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ .register{
+    position: absolute;
+    top: -38px;
+    left: 145px;
+ }
+ .text{
+    font-size: 22px;
+    color: white;
+    width: 66px;
+    height: 29px;
+    margin-right: 58px;
+}
+ .main{
+     background-color: rgba(45,76,80,255);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     width: 511px;
+     height: 390px;
+ }
+ .name-div{
+     display: flex;
+     margin-bottom: 18px;
+     width: 100%;
+     height: 29px;
+     margin-top:10px;
+     margin-left: 20px;
+ }
+ .age-div{
+     display: flex;
+     margin-bottom: 18px;
+     margin-left: 20px;
+     
+ }
+ .email-div{
+     display: flex;
+     margin-bottom: 18px;
+     margin-left: 20px;
+     
+ }
+ .phone-div{
+     display: flex;
+     margin-bottom: 18px;
+     margin-left: 20px;
+     
+ }
+ .password-div{
+     display: flex;
+     margin-bottom: 18px;
+     margin-left: 20px;
+     
+ }
+ .checkbox{
+     display: flex;
+     margin-bottom: 18px;
+     margin-left: 20px;
+     
+ }
+ .gender-div{
+    display: flex;
+    margin-bottom: 18px;
+    margin-left: 20px;
+ }
+ .input-field-radius{
+    margin-right: 10px;
+    border-radius: 5px;
+ }
+ .checkbox-text{
+    margin-left: 72px;
+    color: white;
+ }
+
+ .btn{
+    width: 183px;
+    height: 42px;
+    border-radius: 9px;
+    margin-left: 17px;
+    color:white;
+    background-color:rgba(210,19,0,255);
+ }
+ .div-width{
+    height: 22px;
+ }
