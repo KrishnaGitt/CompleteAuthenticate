@@ -1,7 +1,6 @@
 import User from "../UserModel/User.js";
 
 export const registorUser=async(req,res)=>{
-    console.log("hello Krishna",req.body)
     const {firstName,lastName,age,email,phone,password,confirmpassword}=req.body;
     try {
 

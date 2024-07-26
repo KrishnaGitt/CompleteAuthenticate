@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from "axios"
 import "./Register.css"
 
 const Register = () => {
@@ -18,11 +19,15 @@ const Register = () => {
         }))
         console.log("handle-->",registor)
     }
+    const handleSubmitButton=async(e)=>{
+        e.preventDefault();
+        await axios.post('/api/user/registor',registor)
+    }
   return (
     <>
     <div className='main'>
     <h1 className='register'>Registration form</h1>
-        <form>
+        <form className='form'>
             <div className='name-div'>
                 <div className='text'>Name</div>
                 <input type='text' className="input-field-radius firstName div-width" name='firstName' placeholder='Enter your first name' onChange={handleOnChange}/>
@@ -58,7 +63,7 @@ const Register = () => {
                 <span className='checkbox-text'>I accept the term and condition</span>
             </div>
             <div className='submit-div'>
-                <button className='btn'>Register</button>
+                <button className='btn' onClick={handleSubmitButton}>Register</button>
             </div>
         </form>
     </div>
