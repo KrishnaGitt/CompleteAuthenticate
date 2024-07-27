@@ -36,6 +36,10 @@
     border: 2px solid yellow;
     background-color: rgb(37, 150, 190);
 }
+.login-div:hover{
+    background-color: white;
+    transition: 2s;
+}
 .login-text{
     padding-top: 11px;
     text-align: center;
@@ -44,7 +48,10 @@
     height: 73%;
     width: 20%;
     border: 2px solid yellow;
+}
+.registor-div:hover{
     background-color: rgb(37, 150, 190);
+    transition: 2s;
 }
 .registor-text{
     padding-top: 11px;
@@ -77,4 +84,30 @@
     height: 4px;
     width: 100%;
     display: block;
+}
+.body-img{
+    background-image: url("../dist/homePage.png");
+    width: 100%;
+    height: 85.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 78px;
+
+}
+.footer{
+    width:100%;
+    
+    position: absolute;
+    top: 540px;
+    left: 0;
+}
+.footer-div{
+    background-color: red;
+    height: 10%;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
 }

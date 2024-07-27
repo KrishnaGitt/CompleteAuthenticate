@@ -21,6 +21,10 @@ const Home = () => {
             </div>
             </div>
         </div>
+        <div className='body-img'></div>
+        <footer className='footer'>
+            <div className='footer-div'>Want to build a successful online business?</div>
+        </footer>
     </>
     
   )
