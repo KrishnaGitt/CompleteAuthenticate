@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import axios from "axios"
 import "./Register.css"
+import LoginSlice from "../Redux/Slice/LoginSlice";
+import{useDispatch} from "react-redux"
 
 const Register = () => {
+    const dispatch =useDispatch()
     const [registor,setRegistor]=useState({
         firstName:"",
         lastName:"",
@@ -20,14 +23,32 @@ const Register = () => {
         console.log("handle-->",registor)
     }
     const handleSubmitButton=async(e)=>{
+      const   {firstName,
+            lastName,
+            age,
+            email,
+            phone,
+            password,
+            confirmpassword}=registor;
+        // await axios.post('/api/user/registor',registor)
         e.preventDefault();
-        await axios.post('/api/user/registor',registor)
+
+        dispatch(LoginSlice({
+            firstName,
+            lastName,
+            age,
+            email,
+            phone,
+            password,
+            confirmpassword
+        }))
+
     }
   return (
     <>
     <div className='main'>
     <h1 className='register'>Registration form</h1>
-        <form className='form'>
+        <form className='form' onSubmit={handleSubmitButton}>
             <div className='name-div'>
                 <div className='text'>Name</div>
                 <input type='text' className="input-field-radius firstName div-width" name='firstName' placeholder='Enter your first name' onChange={handleOnChange}/>
@@ -63,7 +84,7 @@ const Register = () => {
                 <span className='checkbox-text'>I accept the term and condition</span>
             </div>
             <div className='submit-div'>
-                <button className='btn' onClick={handleSubmitButton}>Register</button>
+                <button className='btn'>Register</button>
             </div>
         </form>
     </div>
