@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from "axios"
 import "./Register.css"
-import LoginSlice from "../Redux/Slice/LoginSlice";
+import {LoginSlice} from "../Redux/Slice/LoginSlice";
 import{useDispatch} from "react-redux"
 
 const Register = () => {
@@ -15,6 +15,7 @@ const Register = () => {
         password:"",
         confirmpassword:""
     })
+    const{firstName,lastName,age,email,phone,password,confirmpassword}=registor;
     const handleOnChange=(e)=>{
         setRegistor((prev)=>({
             ...prev,
@@ -23,16 +24,8 @@ const Register = () => {
         console.log("handle-->",registor)
     }
     const handleSubmitButton=async(e)=>{
-      const   {firstName,
-            lastName,
-            age,
-            email,
-            phone,
-            password,
-            confirmpassword}=registor;
         // await axios.post('/api/user/registor',registor)
         e.preventDefault();
-
         dispatch(LoginSlice({
             firstName,
             lastName,
@@ -42,7 +35,6 @@ const Register = () => {
             password,
             confirmpassword
         }))
-
     }
   return (
     <>
