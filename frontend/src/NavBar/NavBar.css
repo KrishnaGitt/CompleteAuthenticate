@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.header-nav{
+    display: flex;
+    /* justify-content: space-around; */
+    width: 100%;
+    height: 74px;
+    border: 2px solid red;
+}
+.text{
+    font-family: sans-serif;
+}
+.nav-logo{
+    width: 10%;
+    height: 74px;
+}
+.logo{
+    background-image: url('../dist/foodIcon.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 166px;
+}
+.login-div{
+    height: 73%;
+    width: 20%;
+    border: 2px solid yellow;
+    background-color: rgb(37, 150, 190);
+}
+.login-div:hover{
+    background-color: white;
+    transition: 2s;
+}
+.login-text{
+    padding-top: 11px;
+    text-align: center;
+}
+.registor-div{
+    height: 73%;
+    width: 20%;
+    border: 2px solid yellow;
+}
+.registor-div:hover{
+    background-color: rgb(37, 150, 190);
+    transition: 2s;
+}
+.registor-text{
+    padding-top: 11px;
+    text-align: center;
+    /* align-items: center; */
+    
+    }
+.font-family{
+    font-family: cursive;
+    font-size: 10px;
+    font-size: 1.2rem;
+}
+.cursor:hover{
+    cursor: pointer;
+}  
+.home-div{
+    /* position: absolute; */
+}
+.line-effect::after{
+    content:"";
+    background-color: aqua;
+    height: 4px;
+    width: 0;
+    display: block;
+    transition: width 0.4s ease;
+}  
+.line-effect:hover::after{
+    width: 100%;
+}
+.body-img{
+    background-image: url("../dist/homePage.png");
+    width: 100%;
+    height: 85.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 78px;
+
+}
+.footer{
+    width:100%;
+    
+    position: absolute;
+    top: 540px;
+    left: 0;
+}
+.footer-div{
+    background-color: red;
+    height: 10%;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+.uplift-effect:hover{
+    font-size: 1.4rem;
+
+}

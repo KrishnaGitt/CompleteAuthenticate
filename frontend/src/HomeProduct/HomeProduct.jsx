@@ -1,9 +1,13 @@
 import React from 'react'
 import './HomeProduct.css'
+import NavBar from '../NavBar/NavBar'
+import  Footer  from '../Footer/Footer'
 const HomeProduct = () => {
-  const arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+  // const arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+  const arr=[1,2,3,4]
   return (
     <>
+          <NavBar/>
           <div className='heading-text'>Restaurants with online food delivery in Hyderabad</div>
           <div className='product-filter'>
             <div className='filter-div'>
@@ -52,6 +56,7 @@ const HomeProduct = () => {
       ))}
      
     </div>
+    <Footer/>
     </>
    
   )
